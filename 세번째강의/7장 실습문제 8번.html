@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16개의 랜덤한 색 만들기</title>
+</head>
+<body>
+<h3>16개의 랜덤한 색 만들기</h3>
+<hr>
+<script>
+
+for(i=0; i<16; i++){
+var ramdom_number_arr = new Array(3);
+for(var j=0; j<ramdom_number_arr.length; j++){
+ramdom_number_arr[j] = Math.floor(Math.random()*300)+1;    
+}
+document.write("<div style = 'background-color: rgb("+ramdom_number_arr+"); display : inline-block; width : 150px; padding : 10px;'>");
+document.write("rgb("+ramdom_number_arr+")");
+document.write("</div>");
+}
+</script>
+</body>
+</html>

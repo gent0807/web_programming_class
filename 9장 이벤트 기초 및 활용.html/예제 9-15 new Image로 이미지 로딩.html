@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new Image()로 이미지 로딩</title>
+</head>
+<body>
+    <h3>image load</h3>
+    <hr>
+    <p>이미지를 클릭하면 다음 이미지를 보여줍니다.</p>
+    <img src="apple.jpg" alt="" style="border: 20px ridge pink" width=200 height=200 onclick=effect(this)>
+    
+    <script>
+    var files = ["apple.jpg","banana.jpg","grape.jpg"];
+    var imgs = new Array();// 메인 메모리에 저장
+    for(var i=0; i<files.length; i++){
+        imgs[i]=new Image();//사용자가 정의하는 Object 객체와 String 객체, Array 객체, Date 객체, Math 객체에 이어 Image 개체    
+        imgs[i].src = files[i];
+    }
+    var num = 1; //메인 메모리에 저장
+    function effect(obj){
+    obj.src = imgs[num].src;
+    num++;
+    num %= imgs.length;
+    }
+    
+    
+    
+    </script>
+</body>
+</html>

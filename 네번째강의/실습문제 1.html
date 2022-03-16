@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+            
+</head>
+<body>
+<script>
+
+    var n =new Array();
+    
+    for(var i = 0; i< 10; i++){
+        var x = Math.floor(Math.random()*100)+1;
+        n[i] = x;
+    }
+    
+    for (var i = 0; i < 10; i ++){
+        document.write(n[i]+" ");
+    }
+    
+    document.write("<hr>");
+    
+    
+    var big = n[0];
+
+    for(var i =1; i<10; i++){
+        if(n[i]>big){
+            big=n[i]
+        };
+    }
+    
+    
+    document.write("제일 큰 수는 "+big+"<br>");
+    
+    document.write("<hr>");
+    
+    
+    
+    n.sort();
+    
+    for(var i = 0; i< 10; i++){
+        document.write(n[i]+" ");
+    }
+    
+    
+</script>
+</body>
+</html>    

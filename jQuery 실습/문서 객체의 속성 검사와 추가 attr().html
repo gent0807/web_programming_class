@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서 객체의 속성 검사</title>
+</head>
+<body>
+    <img src="apple.jpg" alt="사과입니다">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+        var str = $('img').attr('src');
+        alert(str);
+        var msg = $('img').attr('alt')
+        alert(msg);
+        $('img').attr('width', 100);
+    });
+    </script>
+</body>
+</html>

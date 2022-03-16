@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document.getElementsByTagName()</title>
+    <script>
+    function change(){
+        var arr = document.getElementsByTagName("span");
+        for(i=0; i<arr.length; i++){
+            var s = arr[i];
+            s.style.color = "red";
+            s.style.fontSize = "30px";
+            }
+        }
+    
+    
+    </script>
+    
+</head>
+<body>
+<h3>내가 좋아하는 과일
+<input type="button" value="누르세요"
+       onclick = "change()"></h3>
+<hr>
+빨간 <span>사과</span> 
+중간에 <span>바나나</span>
+달콤한 <span>체리</span>
+향기로운 <span>자두</span> 
+   
+   
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서 객체 조작, 객체 클래스 이름 추가 및 클래스 삭제</title>
+    <style>
+        .item{
+            color: blue
+        }
+        .a{
+            color: red
+        }
+    </style>
+</head>
+<body>
+<h1>겨울방학</h1>
+<h1>아두이노</h1>
+<h2 class="a">웹프로그래밍</h2>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+    $('h1').addClass('item');
+    $('h2').removeClass();
+});
+</script>
+</body>
+</html>

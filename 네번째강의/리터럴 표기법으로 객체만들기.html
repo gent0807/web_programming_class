@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+<script>
+var acc = { owner : "leeesangsoon",
+          code : "333", balance : 30000, 
+          inquiry : function(){return this.balance;}, 
+          deposit : function(money){this.balance+=money;},
+          withdraw : function(money){if(this.balance>=money)
+          this.balance-=money
+          else 
+          document.write("잔액부족<br>");
+          
+          }
+          };
+</script>
+</head>
+<body>
+
+<script>
+document.write("계좌정보"+acc.owner+","+
+              acc.code+","+acc.balance+"<br>");
+acc.deposit(4000);
+document.write("저축 4000:"+acc.inquiry());
+acc.withdraw(30000);
+document.write("<br>인출 3000만원:"+acc.inquiry());
+</script>
+</body>
+</html>    

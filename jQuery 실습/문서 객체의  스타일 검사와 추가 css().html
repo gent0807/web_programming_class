@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서 객체의 스타일 검사와 추가 css()</title>
+</head>
+<body>
+    <h1>yellow</h1>
+    <h1>brown</h1>
+    <h1>orange</h1>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var colors=['yellow', 'brown', 'orange'];
+            $('h1').css('color',function(index){
+                return colors[index];
+            });
+        });
+    </script>
+</body>
+</html>

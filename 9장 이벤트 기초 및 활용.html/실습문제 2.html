@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>라디오 버튼을 클릭하면 이미지를 출력</title>
+</head>
+<body>
+   <h3>라디오 버튼을 클릭하면 이미지를 출력</h3>
+   <hr>
+   
+   <form>
+    <input type="radio" name="fruit" value="banana.jpg" onclick="paint()">바나나
+    <input type="radio" name="fruit" value="grape.jpg" onclick="paint()">
+    포도
+    <input type="radio" name="fruit" value="apple.jpg" onclick="paint()" checked>사과
+   </form>
+   <br>
+   <img id="i" src="apple.jpg" height=150 alt="">
+    
+<script>
+var found = null;
+function paint(){
+    var thing=document.getElementById("i");
+    var fruits=document.getElementsByName("fruit");
+    for(var i=0; i<fruits.length; i++){
+        if(fruits[i].checked==true)
+            found=fruits[i];
+    }
+    thing.src=found.value;
+}
+
+    
+    
+</script>
+</body>
+</html>

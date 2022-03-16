@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createElement()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>세상을 바꿀 엔비디아, 어떤 세상으로 바꾼다는 걸까?</h2>
+    <hr>
+    <div id="parent">
+        <input type="button" value="click">
+        <input type="button" value="erase">
+    </div>
+    <script>
+    var parent=document.getElementById("parent");
+    var inputs=document.getElementsByTagName("input");
+        inputs[0].onclick=add;
+        inputs[1].onclick=del;
+    function add(){
+        var a=document.createElement("div");
+        a.innerHTML="<p>우리 인류가 지금까지 앞서 이루어낸 세 번의 산업 혁명에 대해 한 번 생각해보자</p> <p>1차 산업 혁명에서의 <span style='color:greenyellow'>석탄의 발견과 증기 기관의 발명</span>은 오직 인간의 순수 노동력만이 동력 에너지가 될 수 있었던 기존 산업의 시스템을<br>자연 상태의 에너지를 동력 에너지로 변환하여 사용하는 시스템으로 바꾸어 놓았고</p> <p>2차 산업 혁명에서의 <span style='color:greenyellow'>석유의 발견과 전기 에너지의 발명</span>은 대량 생산체제를 고착화시켰고 에너지 사용 효율을 급속도로 높여주었다.</p><p>3차 산업에서의 <span style='color:greenyellow'>집적 회로의 발명</span>은 인류가 에너지를 더욱 더 빠르고 세밀하게 제어할 수 있도록 해주었고 작업 속도와 인간 노동의 효율성을 극도로 높여주었다. 공장의 자동화가 실현된 것도 바로 이 때부터다.</p> <p>여기서, 우리는 인류가 앞서 이룩해놓은 세 번의 산업 혁명이 모두 본질적으로 <span style='color:greenyellow'>에너지의 효율성과 인간 노동의 최소화를 지향</span>하고 있음을 알 수 있다. 그 경향은 결국 인간의 노동을 제로에 수렴하도록하는, 즉 인간이 인간 수준의 지능과 노동력을 가진 존재를 만들어내 에너지의 소비를 0에 수렴하도록 하는 정도를 바라게 되었고<br><br>이것은 이제 단순 바램이 아닌 점점 현실로 이루어지는 시점에 우린 놓여있다. 이것을 4차 산업혁명이라 부르며 바로 이 <span style='color:greenyellow'>4차 산업혁명의 기반</span>이 되고 있는 기업이 바로 <span style='color:greenellow'>엔비디아</span>다.</p><p>엔비디아는 인간이 인간 수준의 지능을 창조하는 세상을 이루고자 하는 것이다</p><hr>-설명란--<br>click 버튼을 눌렀을 때 createElement()로 div 태그 객체를 동적으로 생성한 다음 기존의 div 태그의 자식 노드에 추가해줍니다. erase 버튼을 클릭하면 removeChild()로 추가한 태그를 삭제";
+        parent.appendChild(a);
+    }
+    function del(){
+        if(this!=parent.lastChild)
+        parent.removeChild(parent.lastChild);
+    }
+    </script>
+</body>
+</html>

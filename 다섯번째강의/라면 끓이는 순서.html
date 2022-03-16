@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>라면을 끓이는 순서</title>
+
+<script>    
+function change(){
+    var arr = document.getElementsByTagName("li");
+    fro(i=0; i<arr.length;i++){
+        var li = arr[i];
+        li.style.color = "green";
+        li.style.fontWeight ="bold";
+        
+        
+    }
+                                    
+function count(){
+    var arr = document.getElementsByTagName("li");
+    alert(arr.length);
+    
+}
+    
+    
+}    
+</script>
+</head>
+<body>
+<h3 onclick="change()">라면을 끓이는 순서</h3>
+<hr>
+<ol type="A"
+   onclick="this.backgroundColor='yellow'">
+    <li>물을 끓인다.</li>
+    <li>라면과 스프를 넣는다</li>
+    <li>파를 썰어 넣는다</li>
+    <li>5분후 먹는다</li>
+    <p onclick ="count()">li태그의 개수는?</p>
+    
+</ol>    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>컬렉션 객체의 인덱스를 인자로 받는 메소드의 반환값,문자열을 클래스 이름에 추가하기 
+    </title>
+    <style>
+        .class0{
+            color: blue
+        }
+        .class1{
+            color: magenta
+        }
+        .class2{
+            color: green
+        }
+    </style>
+</head>
+<body>
+    <h1>웹프로그래밍</h1>
+    <h1>자바스크립트</h1>
+    <h1>CSS</h1>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $('h1').addClass(function(index){
+            return 'class'+index;
+        });
+    });
+</script>
+</body>
+</html>

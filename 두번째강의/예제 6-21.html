@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>continue 문</title>
+</head>
+<body>
+<h3>1에서 10까지 정수 중 3으로 나눈 나머지가 1인 수만 더하기</h3>
+<hr>
+<script>
+var sum = 0;
+    for(var i=1;i<=10;i++){
+        if(i%3 != 1)
+        continue;
+        document.write(i+" ");
+        sum+=i;
+    }
+ 
+document.write("<br>1에서 10까지의 정수 중 3으로 나눈 나머지가 1인 수만 더하면 "+ sum);
+    
+    
+    
+</script>    
+</body>    
+</html>

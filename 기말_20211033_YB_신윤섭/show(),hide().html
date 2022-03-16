@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show(),hide()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+        b {
+            font-size: 20px;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        td {
+            background-color: white;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<h2>CPU와 GPU</h2>
+<hr>
+    <input type="button" value="click">
+    <div id="div">
+        <pre><img src="cpu.jpg" width="200px" height="201px">                 <img src="gpu.jpg" width="200px" height="200px"></pre>
+        <div><pre><b>cpu</b>                                           <b>gpu</b></pre></div>
+        <table>
+        <tr><th>cpu</th><th>gpu</th></tr>
+        <tr><td>직렬 처리 방식</td><td>병렬 처리 방식</td></tr>
+        <tr><td>소량의 고성능 코어 연산</td><td>수 천개의 저성능 코어로 연산</td></tr>
+        <tr><td>복잡한 작업을 순차적으로 수행</td><td>단순 작업을 동시에 많은 양을 수행</td></tr>
+        <tr><td>다양한 연산 수행 가능</td><td>그래픽 처리에 특화</td></tr>  
+        </table>
+        
+        <p>그래픽 처리를 위해선 동시에 입력되는 수 천 개의 픽셀 단위의 정보를 동시에 실시간으로 처리를 해야하는데 이는 픽셀 단위의 정보 하나만 보면 단순한 연산이지만 동시에 처리되는 정보의 양이 엄청나게 많은 연산이다.</p> <p>여기서 그러면 cpu의 코어 수를 수 천개로 늘려서 쓰면 되지 왜 굳이 gpu가 필요하냐 하겠지만 cpu의 코어 수를 늘려 그래픽처리를 하게되면 고성능, 고비용의 코어가 그만큼 늘어나므로 cpu 가격이 너무나 비싸지고 단순한 연산에 고성능 코어를 쓰는 것은 낭비이기 때문에 cpu의 역할은 순차적이고 복잡한 연산에 집중시키고 그래픽 처리를 전적으로 담당하는, 수 천개의 낮은 성능의 코어로 구성된 gpu를 만들게 되었다. 즉, 여러가지 효율성 측면에서 gpu가 필요한 것이다.</p><hr>
+        --설명란--<br>제이쿼리 문법으로 div 태그를 hide()를 이용해 숨겼다가 show()를 이용해 나타나게 해주었습니다.  
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+       $('body').ready(function(){
+           $('#div').hide();
+       });
+       $('input').click(function(){
+        $('#div').show();
+        });
+    });
+    </script>
+</body>
+</html>

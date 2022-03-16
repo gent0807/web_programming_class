@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+<script>
+
+    
+    function Student(name, score){
+        this.univ = "동양미래대";
+        this.name = name;
+        this.score = score;
+        this.getGrade = function(){
+            
+        if(this.score > 80) return "A";
+            else if(this.score > 60) return "B";
+            else return "F";
+        }
+    };
+</script>
+</head>
+<body>
+
+<script>
+var kitae = new Student("황기태", 75);
+var jaemoon = new Student("이재문", 93);
+document.write(kitae.univ+","+kitae.name+"의 학점은"+kitae.getGrade()+"<br>");
+document.write(jaemoon.univ+","+jaemoon.name+"의 학점은"+jaemoon.getGrade()+"<br>");
+</script>
+</body>
+</html>    

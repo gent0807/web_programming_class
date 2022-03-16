@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>키 이벤트</title>
+</head>
+<body>
+<h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+<hr>
+텍스트 창에 키를 눌러보세요. Alt, Shift, Ctrl 키도 가능합니다.<br>
+<input type="text" onkeydown="anounce(event)">
+<div id="a" style="background-color: aqua; width: 250px; height: 50px">
+</div>
+
+<script>    
+function anounce(happen){
+    var box= document.getElementById("a");
+    box.innerHTML="";
+    var str="";
+    str+="선택된 키는 "+happen.key+"<br>"+"키의 종류는 "+happen.code+"<br>";
+    box.innerHTML=str;
+}    
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drawImage()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>엣지 컴퓨팅을 위한 엔비디아의 무기, DPU</h2>
+    <hr>
+    <canvas id="canvas" style="background-color: black" width="400" height="300"></canvas>
+    <div>앞서 설명한 바와 같이 엣지 컴퓨팅은 기존의 클라우드 컴퓨팅의 한계를 보완하기 위해 중앙데이터센터의 하위에 또 다른 데이터센터들은 분산하여 엣지 디바이스 가까이에서 데이터를 처리하는 방식이라하였다. 기존의 클라우드 컴퓨팅은 단순히 더 좋은 성능의 CPU와 GPU를 사용하면 성능이 높아지는 방식이었지만 엣지 컴퓨팅은 데이터센터를 분산하여 데이터를 연산하므로 그만큼 <span style="color: greenyellow">데이터 전송 처리를 빠르고 정확하게 해주는 것이 성능을 좌우</span>하게 된다. 이에 따라 엔비디아는 데이터 전송 처리 성능을 높인 설계로 연산 장치를 개발하게 되는데 그것이 바로 <span style="color: greenyellow">DPU</span>이다.</div>
+    <hr>
+    <div>--설명란--<br>이미지를 그릴 캔버스를 지정하고 캔버스 객체를 잡은 다음 그리기 도구를 생성해주고 new Image()로 이미지 객체를 생성해주고 이미지가 로드될 때 drawImage()를 이용하여 이미지 객체의 src 속성으로 지정한 이미지를 캔버스 위에 그려주었습니다.</div>
+    <script>
+    var canvas= document.getElementById("canvas");
+    var context= canvas.getContext("2d");
+        
+        var img = new Image();
+        img.onload= function(){
+            context.drawImage(img,3,3,300,300);
+        }
+        img.src="DPU.png";
+    </script>
+</body>
+</html>

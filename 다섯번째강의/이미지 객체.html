@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <img src="img3.jpg" name="everland" alt="놀이동산" width= 300 height=300 border = 3 onclick="change(this)" onmouseover="color(body)"
+    onmouseout="body.style.backgroundColor='teal'">
+    
+    
+    <script> // script 태그 안에선 태그 이름 변수들 중에서 document 변수만을 인식한다.
+    function change(obj){
+        obj.border= 10;  // 이벤트 리스너에서 함수를 호출하고 함수의 매개변수로 객체를 가져오는 방법
+        i[0].height=700
+    }
+    function color(obj){
+        obj.style.background="gold"; // 이벤트 리스너에서 함수를 호출하고 함수의 매개변수로 객체를 가져오는 방법
+    }
+    var i = document.getElementsByTagName("img"); // document 객체의 메소드로 객체를 가져오는 방법, 태그 이름을 바탕으로 가져온다 여기선 img가 문자열
+                                                 // 인자로 주어졌다.
+    i[0].height=500;
+        
+    document.write("<br>이미지 이름:" + document.everland.name); // document 객체의 프로퍼티로 객체를 가져오는 방법
+    document.write("<br>이미지 주소:" + document.everland.src);
+    document.write("<br>이미지 설명:" + document.everland.alt);
+    document.write("<br>이미지 가로:" + document.everland.width);
+    document.write("<br>이미지 세로:" + document.everland.height);
+    document.write("<br>이미지 두께:" + document.everland.border);
+    </script>
+    
+</body>
+</html>

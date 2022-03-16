@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        
+    </head>
+    <body>
+    <script>
+    var i,j;
+    for(i=0; i<10;i+=3)
+        {document.write(i+" ");}
+    document.write("<br>");
+        
+    var n = prompt("행수입력");
+    n =parseInt(n);
+    for(i=0;i<n;i++){for(j=0;j<=i;j++){document.write("*"+" ");}document.write("<br>");}//for문 안의 for문의 초기화식 주의! for문 안의 for문의 초기화는 제일 바깥의 for문이 반복될때마다 이루어지게 된다. 
+        
+        
+    
+    </script>
+    </body>
+</html>

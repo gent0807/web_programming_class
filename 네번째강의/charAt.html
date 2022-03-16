@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+            
+</head>
+<body>
+
+<script>
+
+    var a = new String("Boys and Girls");
+    var b = "!!";
+    
+    //var jumin = prompt("주민번호>>");
+    
+    //if(jumin.charAt(7)==3)
+        //document.write("남성입니다.<br>");
+    
+    //else 
+        //document.write("여성입니다.<br>");
+    
+    document.write("charAt():"+a.charAt(1)+"<br>");
+    document.write("charCodeAt():"+a.charCodeAt(0)+"<br>");
+    document.write("concat():"+a.concat(b,"ddd")+"<br>");
+    document.write("indexOf():"+a.indexOf("and")+"<br>");
+    document.write("slice():"+a.slice(5,8)+"<br>");
+    document.write("substring():"+a.substring(5,8)+"<br>");
+    document.write("substr():"+a.substr(5,3)+"<br>");
+    document.write("replace():"+a.replace("and", "between")+"<br>");
+    
+    
+    
+    str = "555&rrr&rrr/yyy"
+    document.write("split():"+str.split("&")+"<br>");
+    
+    
+    document.write("toUpperCase():"+a.toUpperCase()+"<br>");
+    document.write("toLowerCase():"+a.toLowerCase()+"<br>");
+    
+    
+    
+    document.write(a.strike()+"<br>");
+    document.write(a.bold()+"<br>");
+</script>
+</body>
+</html>    

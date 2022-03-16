@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slideUp(),slideDown()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>GPU, 4차 산업혁명의 씨앗</h2>
+    <hr>
+    <input type="button" value="click" id="input">
+    <div>앞서 설명했다시피, 4차 산업혁명은 인간이 에너지의 소비와 노동의 투입을 최소화시키고자 하는 흐름의 연장선이다. 인간이 에너지의 소비와 노동의 투입을 최소화시키는 궁극적인 방법은 인간이 인간 수준의 이성과 지능을 가진 존재를 창조해내는 것이다. 4차 산업혁명에서 이러한 궁극적인 방법을 지향한 결과의 산물이 바로<span style='color:greenyellow'>인공지능</span>이다. 인공지능은 <span style='color:greenyellow'>4차 산업혁명의 코어</span>라고 할 수 있다. 4차 산업 혁명에서 비롯된 현상들은 모두 인공지능을 대전제로 하고 있다. <p>이러한 인공지능을 구현해내는 대표적인 방법들 중 하나가 <span style='color:greenyellow'>딥러닝 알고리즘</span>인데 딥러닝 알고리즘은 수 없이 많은 정보들을 동시에 학습하고 훈련하여 최적의 추론을 해내는 알고리즘이다. 그런데 컴퓨터가 딥러닝 알고리즘을 수행하려면 수 없이 많은 정보들을 동시에 읽어들여 동시에 학습하고 훈련해야 하므로 딥러닝 알고리즘에 cpu를 사용하는 것은 적절하지 않다. cpu의 코어가 소량이다 보니 동시에 처리할 수 있는 정보의 양은 작고 제한적이다.</p> 
+        <p>이러한 <span style='color:greenyellow'>cpu의 제한성</span>으로 인해 인공지능의 개발이 어려웠고 이는 3차 산업혁명 이후의 산업 방식이 큰 진전이 없던 이유 중 하나가 되었다. 하지만 gpu의 성능이 급속도로 올라가면서부터 얘기가 달라지기 시작했다. gpu는 수 천개의 코어가 동시에 수 많은 정보들을 처리하지만 코어 하나 당 성능은 많이 낮았기 때문에 쉬운 연산인 그래픽 처리만을 담당했지만 gpu 코어 하나 당 성능이 높아지면서 gpu는 단순히 그래픽 처리뿐만 아니라 다른 복잡한 연산도 수행할 수 있게 되었다.</p><p>엔비디아는 이 때부터 gpu의 또다른 가능성을 보고 gpu 코어들의 그래픽 처리 능력은 다소 떨어뜨리더라도 컴퓨터 연산 능력을 극대화시켜 <span style='color:greenyellow'>인공지능 개발 전용 gpu인 GPGPU를 개발</span>하였고 이는 4차 산업혁명의 불씨를 지피게 되었다.</p><hr>--설명란--<br>제이쿼리 문법으로 윈도우가 로드될 떄 div 태그를 slideUp()했다가 버튼을 클릭하면 slideDown()하도록 하였습니다.
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("div").slideUp();
+            $("input").click(function(){
+                $("div").slideDown(1500);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+<script>
+function inquiry(){
+    return this.balance;
+    
+}
+    function deposit(money){
+        this.balance += money;
+    }
+    
+    function withdraw(money){
+        if(this.balance >= money){
+            this.balance -= money;
+        }
+        else {
+            document.write("잔액확인<br>");
+        }
+        
+    }
+    var account = new Object();
+    account.balance = 35000;
+    account.owner = "Yoonseop"
+    account.code="111"
+    account.inquiry= inquiry;
+    account.deposit = deposit;
+    account.withdraw = withdraw;
+</script>
+</head>
+<body>
+
+<script>
+document.write("계좌주인:"+ account.owner+"<br>");
+document.write("계좌번호:"+ account.code+"<br>");
+document.write("계좌잔액:"+ account.balance+"<br>");
+
+account.deposit(10000);
+document.write("저축후잔액: "+account.balance+"<br>");
+
+account.withdraw(5000);
+document.write("5000원 인출후잔액: "+account.inquiry()+"<br>");
+</script>
+</body>
+</html>    

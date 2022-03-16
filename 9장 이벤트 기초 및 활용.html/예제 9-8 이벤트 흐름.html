@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 흐름</title>
+</head>
+<body>
+<p style="color: blue">이것은 <span style="color: red">문장입니다</span></p>
+<form>
+    <input type="text">
+    <input type="button" value="테스트" id="button">
+</form>
+<hr>
+<div id="div" style="color: green"></div>    
+
+<script>
+    var b = document.getElementById("button");
+    var d = document.getElementById("div");
+    document.body.addEventListener("click", f1, true);
+    b.addEventListener("click", f2, false);
+    document.body.addEventListener("click", f2, false);
+    
+    function f1(e){
+        var obj = e.currentTarget;
+        var tagName= obj.tagName;
+        d.innerHTML += "<br>capture단계 : "+tagName+"태그"+e.type+"이벤트";
+    }
+    function f2(e){         
+        var obj = e.currentTarget;
+        var tagName= obj.tagName;
+        d.innerHTML += "<br>bubble단계 : "+tagName+"태그"+e.type+"이벤트";
+    }
+</script>
+</body>
+</html>

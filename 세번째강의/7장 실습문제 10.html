@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제 10번</title>
+</head>
+<body>
+<h3>book 객체 배열 만들기</h3>
+<hr>
+<script>
+
+var bookArray = new Array();//이 때 배열 객체는 한번 만 생성해주고 배열 요소에 들어가는 사용자 객체는 배열 요소의 수만큼 새로 찍어내준다.
+for(i=0; i<5; i++){
+var str=prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력");
+var arr=str.split(",");
+var book = new Object(); //매번 새로운 객체를 생성해서 새로운 주소를 반환해주어야 한다.
+book.title = arr[0];
+book.author= arr[1];
+book.price = parseInt(arr[2]);
+bookArray[i]=book; // 여기서 배열요소가 복사된 객체의 주소값을 저장해놓기 때문에 새로운 객체를 생성해서 반환된 새로운 주소값을 래퍼런스 변수 book에 저장해도 ok
+document.write(bookArray[i].title+", "+bookArray[i].author+", "+bookArray[i].price+"<br>");
+}
+    
+document.write("<hr>");
+
+var large= 0;
+
+for(j=0; j<bookArray.length; j++){
+      if(large<bookArray[j].price)
+          large=bookArray[j].price;
+}
+
+for(k=0; k<bookArray.length; k++){
+    if(large==bookArray[k].price)
+        document.write("가장 가격이 비싼 책은 "+ bookArray[k].title);
+    
+}
+    
+    //HTML5, 황기태, 20000
+//CSS3, 이재문, 50000
+//자바, 한원선, 30000
+//스폰지밥, 그레이스, 60000
+//C++, 기태, 25000
+    
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+    .design{
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+    }
+</style>
+</head>
+<body>
+<form action="">
+    <input type="button" value="그림보이기" id="imgshow">
+    <input type="button" value="그림숨기기" id="imghide">
+    <input type="button" value="그림토글" id="imgtoggle">
+</form>
+<div class="design">
+    <img src="apple.jpg" alt="" style="width: 300px; height: 300px">
+</div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js">
+//자바스크립트 라이브러리인 제이쿼리를 설치한다.    
+</script>
+
+<script>
+$(document).ready(function(){ //JQuery(document).ready(function(){});
+    //window.onload=function(){};
+$("#imgshow").click(function(){$(".design").show();});
+$("#imghide").click(function(){$(".design").hide();});
+$("#imgtoggle").click(function(){$(".design").toggle();});
+});
+</script>
+</body>
+</html>

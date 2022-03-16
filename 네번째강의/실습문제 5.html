@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+            
+</head>
+<body>
+
+<script>
+
+    var names = ["alex", "stiven", "white", "andy", "aliyah"];
+    
+    for(i=0; i<names.length; i++){
+        document.write(names[i]+"<br>");
+    }
+    
+    
+    
+    var long=names[0];
+    
+    for(i=1; i<names.length; i++){
+        if(long.length<names[i].length){
+            
+            long=names[i];
+        }
+    }
+    
+    document.write("가장 긴 이름은: "+long+"<br>");
+    
+    
+    
+    var first = names.sort();
+    document.write("사전에서 가장 먼저 나오는 이름: "+first[0]+"<br>");
+    
+    
+    document.write(first+"<br>");
+    
+    
+    
+</script>
+</body>
+</html>    

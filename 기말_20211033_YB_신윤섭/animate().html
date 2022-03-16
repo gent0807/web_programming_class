@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animate()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>인공지능 개발 플랫폼, CUDA</h2>
+    <hr>
+    <div>엔비디아의 GPGPU는 <span style='color:greenyellow'>인공지능 개발의 물리적인 도구</span>라 할 수 있는데, 엔비디아는 인공지능 개발에 있어 물리적인 도구를 제공할 뿐만 아니라 엔비디아의 GPU와 호환되어 인공지능 개발을 편리하게 하기 위한 프로그래밍 플랫폼도 같이 제공하여 더욱더 인공지능 개발자들을 자신들의 생태계로 유입시켰다. 엔비디아가 제공하는 인공지능 프로그래밍 플랫폼을 <span style='color:greenyellow'>쿠다</span>라고 하는데, 쿠다 출시 이전의 인공지능 개발자들은 인공지능 연구를 위해선 GPU 전용 프로그래밍을 배워 GPU 전용 코드로 프로그램을 짜서 GPU에 넣어주어야 했는데 쿠다는 GPU 전용 프로그래밍 언어가 아닌 c언어나 c++같은 <span style='color:greenyellow'>일반적인 프로그래밍 언어로도 인공지능 개발</span>을 가능하게 하였다.</div>
+    <div><img src="쿠다2.jpg" alt="" style="width: 1px; height: 1px"id="cuda1"><img src="쿠다1.png" alt="" width="1" height="1" id="cuda2"></div><hr>--설명란--<br>제이쿼리 문법으로 animate()를 이용해 윈도우가 로드되면 이미지가 확대되는 효과를 적용하였습니다.
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("body").ready(function(){
+            $("#cuda1").animate({width:"270px"},1000);
+            $("#cuda1").animate({height:"270px"},1000);
+            $("#cuda2").animate({width:"270px"},1000);
+            $("#cuda2").animate({height:"270px"},1000);
+        });
+    });
+    </script>
+</body>
+</html>

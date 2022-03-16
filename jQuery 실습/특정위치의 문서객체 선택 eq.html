@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>특정위치의 문석 객체 선택 메소드 eq</title>
+</head>
+<body>
+    <h3>웹프로그래밍0</h3>
+    <h3>웹프로그래밍1</h3>
+    <h3>웹프로그래밍2</h3>
+    <h3>웹프로그래밍3</h3>
+    <h3>웹프로그래밍4</h3>
+    <h3>웹프로그래밍5</h3>
+<script src ="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $('h3').eq(0).css('background','orange');
+        $('h3').eq(-3).css('background','yellow');
+        $('h3').eq(4).css('background','red');
+    });
+</script>
+</body>
+</html>

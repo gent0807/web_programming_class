@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>윈도우의 위치와 크기 조절</title>
+</head>
+<body>
+    <h3>윈도우의 위치와 크기 조절</h3>
+    <hr>
+    <form>
+        <input type="button" onclick="window.moveBy(-10,0)" value="left">
+        <input type="button" onclick="window.moveBy(10,0)" value="right">
+        <input type="button" onclick="self.moveBy(0,-10)" value="up">
+        <input type="button" onclick="moveBy(0,10)" value="down">
+        <input type="button" onclick="window.resizeBy(10,10)" value="+">
+        <input type="button" onclick="resizeBy(-10,-10)" value="-">
+    </form>
+
+</body>
+</html>

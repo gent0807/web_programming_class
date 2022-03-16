@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .smallpic{
+            width: 100px;
+            height: 100px;
+            border: 2px dotted red;
+        }
+        .bigpic{
+            width: 200px;
+            height: 200px;
+            display: none;
+            position: absolute;
+            left: 100px;
+            border: 2px dotted red;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li{
+            display: inline;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="gallery">
+    <ul>
+        <li>
+            <img src="1.jpg" id="small1" class="smallpic">
+            <img src="1.jpg" id="big1" class="bigpic">
+        </li>
+        <li>
+            <img src="2.jpg" id="small2" class="smallpic">
+            <img src="2.jpg" id="big2" class="bigpic">
+        </li>
+        <li>
+            <img src="3.jpg" id="small3" class="smallpic">
+            <img src="3.jpg" id="big3" class="bigpic">
+        </li>
+    </ul>    
+    </div>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#small1").click(function(){$("#big1").fadeIn();});
+        $("#big1").click(function(){$("#big1").fadeOut();});
+        $("#small2").click(function(){$("#big2").fadeIn();});
+        $("#big2").click(function(){$("#big2").fadeOut();});
+        $("#small3").click(function(){$("#big3").fadeIn();});
+        $("#big3").click(function(){$("#big3").fadeOut();});
+    });
+</script>
+</body>
+</html>

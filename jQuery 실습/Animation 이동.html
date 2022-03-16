@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width : 100px;
+            height: 30px;
+            border: 1px solid red;
+        }
+        img {
+            border:2px solid red;
+        }
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+  <div>나 커져요.</div>
+   <img src="snow.jpg" id='snow' width='400' height="265"><br>
+   <b> 한국의 겨울</b>눈이와요<br>
+   <button id='btn1'>좌우 이동</button>
+   <button id='btn2'>이미지토글</button>
+    
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('div').click(function(){
+            $(this).animate({width:'+=50'},1000);
+            $(this).animate({height:'+=50'},1000); 
+            });
+            $('#btn1').click(function(){
+            $('img').animate({marginLeft:'+=300px'}, 'slow');
+            $('img').animate({marginLeft:'-=300px'}, 'slow');
+            });
+            $('#btn2').click(function(){
+            $('#snow').animate({heighr:'toggle'}, 'slow'); 
+            });
+            
+        });
+    </script>
+</body>
+</html>

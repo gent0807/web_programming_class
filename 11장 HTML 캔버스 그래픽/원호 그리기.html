@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>원호 그리기</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200" style="background-color: azure"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    
+    context.beginPath();
+    context.strokeStyle="magenta";
+    context.arc(100,70,30,0,1.5*Math.PI,false);//시계 방향
+    context.stroke();
+    
+    context.beginPath();
+    context.strokeStyle="blue";
+    context.arc(100,70,50,Math.PI/2,Math.PI,true);
+    context.stroke();
+</script>
+</html>

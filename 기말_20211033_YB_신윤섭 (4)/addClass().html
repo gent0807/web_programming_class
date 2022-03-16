@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addClass()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+        .span0{color: greenyellow;}
+        
+        .span1{color: greenyellow;}
+        
+        .span2{color: greenyellow;}
+        
+        .span3{color: greenyellow;}
+        
+        .span4{color: greenyellow;}
+        
+        .span5{color: greenyellow;}
+        .img0{
+            position: absolute;
+            display: none;
+            left: 35px;
+            width: 250px;
+            height: 200px;
+        }
+        .img1{
+            width: 280px;
+            height: 280px;
+        }
+        .img2{
+            width: 280px;
+            height: 280px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>이제는 데이터 센터 CPU까지, <br>엔비디아의 데이터 센터 패키지 서비스</h2>
+    <hr>
+    <div><p>GPU가 최근부터 데이터센터에 많이 채택되긴 했으나 그렇다고해서 CPU 자체가 아예 필요하지 않은 것은 아니다. 여전히 GPU보다는 CPU가 연산 처리 속도와 성능 면에서는 앞서는 사실이기 떄문에 <span>GPU가 완전히 CPU를 대체하지는 못하고 있는 것</span>이다.</p><p>그렇기 때문에 엔비디아는 이미 선점한 데이터센터용 GPU를 미끼 상품으로 하여 자사의 <span>GPU와 강력한 호환성</span>을 갖는 <span>데이터 센터용 CPU까지 선택하도록</span> 하는 전략을 펼치고 있다. 그러한 전략의 산물이 2023년 출시 예정인 데이터센터용 CPU, <span>GRACE</span><img src="GRACE.jpg" alt="">이다. 실제로 엔비디아는 <span>GRACE와 엔비디아의 GPU를 같이 이용</span>했을 때, 연산 처리 속도가 인텔의 CPU와 엔비디아의 GPU를 같이 이용했을 때보다 <span>10배 더 빠르다는 결과</span>를 발표하기도 하였다.</p></div>
+    <img src="X86.jpg" alt=""><img src="ARM.png" alt="">
+    <div><pre>        인텔 CPU와 엔비디아 GPU 조합          엔비디아 GRACE와 엔비디아 GPU 조합</pre></div>
+    <hr>
+    --설명란--
+    <br>
+    제이쿼리 문법으로 addClass()를 이용해 윈도우가 로드될 때 span 태그와 img 태그에 클래스를 부여하여 style에 변화를 주었습니다. 또한 색칠된 GRACE에 마우스를 올리면 이미지가 fadeIn()되었다가 이미지에서 마우스가 벗어나면 이미지가 fadeOut()됩니다.
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("span").addClass(function(index){
+               return 'span'+index;
+           });
+            $("img").addClass(function(index){
+                return 'img'+index;
+            });
+            $(".span3").mouseover(function(){
+                $(".img0").fadeIn();
+            });
+            $(".img0").mouseout(function(){
+                $(".img0").fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

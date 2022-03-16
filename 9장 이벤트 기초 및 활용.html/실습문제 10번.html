@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계산기 만들기</title>
+    <style>
+        td{
+            width: 80px;
+        }
+        input[type=text]{
+            width: 270px;
+        }
+        input[type=button]{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+    <table>
+        <tr>
+            <td colspan=4><input type="text" id="intext"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="back" onclick="back()"></td>
+            <td><input type="button" value="ce" onclick="cleartext()"></td>
+            <td><input type="button" value="e" onclick="cleartext()"></td>
+            <td><input type="button" value="=" onclick="compute()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="additem(this)"></td>
+            <td><input type="button" value="2" onclick="additem(this)"></td>
+            <td><input type="button" value="3" onclick="additem(this)"></td>
+            <td><input type="button" value="+" onclick="additem(this)"></td>
+        </tr><tr>
+            <td><input type="button" value="4" onclick="additem(this)"></td>
+            <td><input type="button" value="5" onclick="additem(this)"></td>
+            <td><input type="button" value="6" onclick="additem(this)"></td>
+            <td><input type="button" value="-" onclick="additem(this)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="additem(this)"></td>
+            <td><input type="button" value="8" onclick="additem(this)"></td>
+            <td><input type="button" value="9" onclick="additem(this)"></td>
+            <td><input type="button" value="*" onclick="additem(this)"></td>
+        </tr><tr>
+            <td><input type="button" value="0" onclick="additem(this)"></td>
+            <td><input type="button" value="NONE"></td>
+            <td><input type="button" value="NONE"></td>
+            <td><input type="button" value="/" onclick="additem(this)"></td>
+        </tr>
+    </table>
+    
+<script>
+
+function back(){
+    var display = document.getElementById("intext");
+    display.value = display.value.slice(0,display.value.length-1);
+}
+function cleartext(){
+      var display = document.getElementById("intext");
+      display.value="0";
+}
+function compute(){
+      var display = document.getElementById("intext");
+      display.value=eval(display.value);
+}
+function additem(obj){
+    var display = document.getElementById("intext");
+    
+    if(display.value=="0")
+    display.value="";
+    
+    display.value += obj.value
+    
+}
+</script>
+</body>
+</html>

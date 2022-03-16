@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array 객체의 메소드 활용</title>
+    <script>function pr(msg, arr){
+            document.write(msg+ arr.toString()+"<br>");}
+    </script>        
+</head>
+<body>
+<h3>Array 객체의 메소드활용</h3>
+<script>
+
+    var a = new Array("황","김","이");
+    var b = new Array("박");
+    var c;
+    
+    c=a.toString();
+    pr("c=a.toString() 후 c=", c);
+    pr("c=a.toString() 후 a=", a);
+    
+    c=a.slice(1,2);
+    pr("c=a.slice() 후 c=", c);
+    pr("c=a.slice() 후 a=", a);
+    
+    c= a. concat(b);
+    pr("c=a.concat(b) 후 c=",c);
+    pr("c=a.concat(b) 후 a=",a);
+
+    c= a.join("/");
+    pr("c=a.join() 후 c=", c);
+    pr("c=a.join() 후 a=", a);
+    
+    c=a.reverse();
+    pr("c=a.reverse() 후 c=",c);
+    pr("c=a.reverse() 후 a=",a);
+    
+
+
+    c=a.sort();
+    pr("c=a.sort() 후 c=", c);
+    pr("c=a.sort() 후 a=", a);
+    
+    
+</script>
+</body>
+</html>    

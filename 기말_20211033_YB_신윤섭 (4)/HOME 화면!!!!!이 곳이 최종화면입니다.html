@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Part</title>
+    <link rel="stylesheet" href="home_settting.css">
+</head>
+<body>
+<header>
+<h1><img src="nvidia.jpg" alt="사진" width="110px" height="60px">NVIDIA</h1>
+</header>
+<nav>
+     <ul>
+         <li><a href="show(),hide().html" target="ifr" onclick="c()">#cpu와 gpu 비교</a></li>
+         <li><a href="fadeIn(),fadeOut().html" target="ifr" onclick="e()">#gpgpu</a></li>
+         <li><a href="animate().html" target="ifr" onclick="f()">#cuda</a></li>
+         <li><a href="텍스트와 원 그리기.html" target="ifr" onclick="g()">#데이터센터</a></li>
+         <li><a href="attr().html" target="ifr" onclick="i()">#엣지컴퓨팅</a></li>
+         <li><a href="drawImage().html" target="ifr" onclick="j()">#DPU</a></li>
+         <li><a href="scrollBy().html" target="ifr" onclick="k()">#자율주행과 옴니버스</a></li>
+         <li><a href="window.open().html" target="ifr" onclick="l()">#래퍼런스</a></li>
+         <li><a href="document.getElementsByName().html" target="ifr" onclick="m()">#확인문제</a></li>
+    </ul>
+         
+</nav>
+<div>
+    <aside id="left">
+        <ul>
+            <li><a href="createElement().html" target="ifr" onclick="a()">createElement(),removeChild()</a></li>
+            <li><a href="addEventListener().html" target="ifr" onclick="b()">addEventListener()</a></li>
+            <li><a href="show(),hide().html" target="ifr" onclick="c()">show(),hide()</a></li>
+            <li><a href="slideUp(),slideDown().html" target="ifr" onclick="d()">slideUp(),slideDown()</a></li>
+            <li><a href="fadeIn(),fadeOut().html" target="ifr" onclick="e()">fadeIn(),fadeOut()</a></li>
+            <li><a href="animate().html" target="ifr" onclick="f()">animate()</a></li>
+            <li><a href="텍스트와 원 그리기.html" target="ifr" onclick="g()">텍스트와 원 그리기</a></li>
+            <li><a href="addClass().html" target="ifr" onclick="h()">addClass()</a></li>
+            <li><a href="attr().html" target="ifr" onclick="i()">attr()</a></li>
+            <li><a href="drawImage().html" target="ifr" onclick="j()">drawImage()</a></li>
+            <li><a href="scrollBy().html" target="ifr" onclick="k()">scrollBy()</a></li>
+            <li><a href="window.open().html" target="ifr" onclick="l()">window.open()</a></li>
+            <li><a href="document.getElementsByName().html" target="ifr" onclick="m()">document.getElementsByName()</a></li>
+            
+        </ul>
+    </aside>
+    <section id=section>
+        <iframe src="intro.html" name="ifr" frameborder="0" width="620" height="600"></iframe>
+    </section>
+    <aside id="right">
+    <div id="div">
+    </div>
+    </aside>
+</div>
+<footer>
+    Copyright (c) 2021 동양미래대학교 컴퓨터소프트웨어공학 1학년 신윤섭<br>
+    경기도 안산시 단원구 석수로 138 102동 804호<br>
+    gent0807@m365.dongyang.ac.kr
+</footer>
+
+<script>
+function a(){
+        var memo = document.getElementById('div');
+        memo.innerHTML="--설명란--<br>click 버튼을 눌렀을 때 createElement()로 div 태그 객체를 동적으로 생성한 다음 기존의 div 태그의 자식 노드에 추가해줍니다. erase 버튼을 클릭하면 removeChild()로 추가한 태그를 삭제";
+    }
+    
+function b(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>addEventListener()를 이용하여 input 태그의 click 이벤트에 대한 함수를 정의해주었습니다.';
+    }
+    
+function c(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>제이쿼리 문법으로 div 태그를 hide()를 이용해 숨겼다가 show()를 이용해 나타나게 해주었습니다.  ';
+    }
+function d(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>제이쿼리 문법으로 윈도우가 로드될 떄 div 태그를 slideUp()했다가 버튼을 클릭하면 slideDown()하도록 하였습니다.';
+    }
+function e(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>제이쿼리 문법으로 버튼을 클릭하면 각 버튼에 해당하는 이미지가 fadeIn()했다가 이미지를 클릭하면 fadeOut()하도록 하였습니다.';
+    }
+function f(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='---설명란--<br>제이쿼리 문법으로 animate()를 이용해 윈도우가 로드되면 이미지가 확대되는 효과를 적용하였습니다.';
+    }
+function g(){
+        var memo = document.getElementById('div');
+        memo.innerHTML="--설명란--<br>getContext('2d')를 이용해서 캔버스 그리기 도구를 불러들여 캔버스위에 fillText()와 arc()를 이용해 텍스트와 원을 그려주었습니다.";
+    }
+function h(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>제이쿼리 문법으로 addClass()를 이용해 윈도우가 로드될 때 span 태그와 img 태그에 클래스를 부여하여 style에 변화를 주었습니다. 또한 색칠된 GRACE에 마우스를 올리면 이미지가 fadeIn()되었다가 이미지에서 마우스가 벗어나면 이미지가 fadeOut()됩니다.';
+    }
+    
+function i(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>제이쿼리 문법으로 이미지를 클릭하면 % 연산자로 인덱스에 해당하는 변수를 루프가 돌게하고 인덱스에 해당하는 이미지를 attr()을 이용하여 문석 객체 추가 해주었습니다.';
+    }
+function j(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>이미지를 그릴 캔버스를 지정하고 캔버스 객체를 잡은 다음 그리기 도구를 생성해주고 new Image()로 이미지 객체를 생성해주고 이미지가 로드될 때 drawImage()를 이용하여 이미지 객체의 src 속성으로 지정한 이미지를 캔버스 위에 그려주었습니다.';
+    }
+function k(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>body가 로드될 때 setInterval()과 window.scrollBy()를 이용하여 윈도우가 자동으로 아래로 스크롤하도록 해주었습니다.';
+    }
+function l(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>a 태그의 텍스트를 클릭하면 load()를 호출하도록 하고 load()의 실행문에 메소드의 인자로 주어진 URL을 새로운 윈도우로 여는 window.open()을 작성하여 새로운 윈도우에서 래퍼런스 사이트를 열도록 하였습니다.';
+    }
+function m(){
+        var memo = document.getElementById('div');
+        memo.innerHTML='--설명란--<br>체크박스 타입의 input 태그로 선택지를 지정해주고 각 문제의 선택지들을 같은 name으로 설정한 다음 document.getElementsByName()을 이용하여 문제 선택지들을 하나의 컬렉션으로 잡아주고 체크된 선택지의 value가 답과 같으면 점수를 추가하여 점수를 계산해주었습니다.';
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

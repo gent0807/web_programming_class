@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table 객체 생성하고 동적할당</title>    
+</head>
+<body onload="set()">
+    <h3>마우스를 클릭하면 이미지 이동, 마우스 클릭 연습</h3>
+    <hr>
+    
+<script>
+function set(){
+    var table=document.createElement("table");
+    table.style.border="1px solid green";
+    table.style.borderCollapse="collapse";
+    document.body.appendChild(table);
+    
+    for(var i=0; i<10; i++){
+        var tr= document.createElement("tr");
+        table.appendChild(tr);
+        for(var j=0; j<10; j++){
+            var td=document.createElement("td");
+            td.style.border="1px solid blue";
+            td.style.width = "50px";
+            td.style.height = "50px";
+            tr.appendChild("td");
+        }
+    }
+    
+    sectors = document.getElementsByTagName("td");
+    thing = document.createElement("img");
+    thing.setAttribute("src","apple.jpg");
+    thing.setAttribute("width", "60px");
+    thing.onclick= function(){
+       var index= Math.floor(Math.random()*sectors.length);
+       sectors[i].appendChild(thing);
+    }
+}
+
+    
+</script>
+</body>
+</html>

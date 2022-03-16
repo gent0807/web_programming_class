@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 태그에 리스너 작성</title>
+    <script>
+var a;
+function init(){
+a= document.getElementById("p");        
+a.onmouseover=over1;
+a.onmouseout=out1;
+}
+function over1(){
+    a.style.backgroundColor="orchid";
+}    
+function out1(){
+    a.style.backgroundColor="white";
+}
+function over(obj){
+    obj.style.backgroundColor="orchid";
+}    
+function out(obj){
+    obj.style.backgroundColor="white";
+}
+    
+</script>
+</head>
+<body onload="init()">
+<h3>HTML 태그에 리스너 작성</h3>
+<hr>
+<p onmouseover = "this.style.backgroundColor='orchid'"
+onmouseout="this.style.backgroundColor='white'">
+마우스 올리면 orchid 색으로 변경</p>
+
+<p onmouseover = "over(this)"
+onmouseout="out(this)">
+마우스 올리면 orchid 색으로 변경</p>
+
+<p id=p>
+마우스 올리면 orchid 색으로 변경</p>
+
+</body>
+</html>

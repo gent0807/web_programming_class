@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 스타일 동적 변경</title>
+    <script>
+    function change(){
+    var span  = document.getElementById("myspan");
+    span.style.color = "green";
+    span.style.border= "3px dotted megenta";
+    }    
+    </script>
+    
+</head>
+<body>
+<h3>CSS 스타일 동적 변경</h3>
+<p style = "color: blue">
+    이것은 <span id="myspan" style="color: red">내용입니다.</span>
+</p>
+<input type = "button" value="스타일변경" onclick="change()">
+<br>
+<p id="cat" onclick="changeimg(this)">고양이입니다.</p>
+
+<script>  
+function changeimg(obj){
+obj.innerHTML="나의 고양이<img src='cat.jpg' width =100 height =100 >입니다.";
+}
+</script>
+</body>
+</html>  

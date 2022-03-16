@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>엔비디아, 무슨 회사일까?</h2>
+    <hr>
+     <div>
+         엔비디아의 시작과 GPU 개발의 시작 <input type="button" value="click" id="input">
+        <div id="div">
+        </div>
+    </div>
+    <script>
+        var input=document.getElementById("input");
+        input.addEventListener("click",function(){
+            var div=document.getElementById("div");
+            div.innerHTML="<img src='젠슨황.jpg' alt='' width='250px' height='260px'><p>엔비디아의 ceo 젠슨황은 원래 AMD에서 CPU 설계 엔지니어로 근무하다 1993년 AMD에서 퇴사한 후 지금의 엔비디아를 창업하기에 이른다.</p><p>엔비디아는 그 때 당시 최대 CPU 제조 업체였던 AMD와 INTEL에 대항해 CPU 시장에 진출하려 했으나 워낙 두 회사의 시장 지배력이 큰 탓에 CPU가 아닌 <span style='color:greenyellow'>그래픽 처리 장치</span>(이하 GPU)를 주력으로 개발하게 된다.</p><p>당시 젠슨황은 앞으로 컴퓨터가 단순 문서 작업만이 아닌 영상 재생과 같은 <span style='color:greenyellow'>멀티미디어용 장치</span>로 발전할 것이라 예측하였고 지금 그 예측은 적중하였다.</p>현대에 컴퓨터는 단순 문서 작업용으로만 사용되지는 않으며 GPU가 장착되지 않은 컴퓨터는 없다시피 하게되었다. 현재 엔비디아는 <span style='color:greenyellow'>GPU 시장에서 독보적 1위</span>에 올라있다.<hr>--설명란--<br>addEventListener()를 이용하여 input 태그의 click 이벤트에 대한 함수를 정의해주었습니다."
+        })
+    </script>
+</body>
+</html>

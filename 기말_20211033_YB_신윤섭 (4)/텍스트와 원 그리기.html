@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트와 원 그리기</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+    <h2>데이터센터까지 장악하는 엔비디아</h2>
+    <hr>
+    <br>
+    <div>데이터센터 수요 증가 프로세스(다음의 <span style="color: greenyellow">원들을 왼쪽부터 순서대로 클릭하라</span>)</div>
+    <br>
+    <canvas id="canvas1" style="background-color: black" width="140" height="150"></canvas>
+    <canvas id="canvas2" style="background-color: black" width="140" height="150"></canvas>
+    <canvas id="canvas3" style="background-color: black" width="140" height="150"></canvas>
+    <canvas id="canvas4" style="background-color: black" width="140" height="150"></canvas>
+    <div id="div"><p>엔비디아의 GPGPU가 촉발시킨 인공지능 개발의 붐으로 인해 수집하고 처리하는 데이터의 양이 기하급수적으로 늘어났고 이는 데이터 센터를 확충할 필요가 있음을 시사했다. 그런데 데이터 센터에서도 CPU보다는 <span style='color:greenyellow'>GPGPU가 훨씬 효율적</span>이기 때문에 이 떄부터 CPU 기반의 데이터센터들이 엔비디아의 GPU를 채택하여 GPU 기반의 데이터센터로 전환하기 시작했다.</p> 
+        <p>CPU 기반의 서버는 서버 확충을 하려면 또 새로운 CPU를 새로 구입해야했지만 GPU 기반의 서버는 <span style='color:greenyellow'>하나의 GPU를 여러 개의 서버로 나누어 사용</span>할 수 있기 때문에 서버 확충을 위한 비용이 CPU에 비해 훨씬 절감되는 강점이 있다. 엔비디아의 데이터센터용 GPU A100 같은 경우만 봐도, 아마존, 마이크로소프트, 구글, 텐센트, 알리바바, 바이두 등 세계 주요 클라우드 컴퓨팅 사업체들이 GPU를 채택했음을 알 수 있다.</p><hr>
+        --설명란--<br>getContext('2d')를 이용해서 캔버스 그리기 도구를 불러들여 캔버스위에 fillText()와 arc()를 이용해 텍스트와 원을 그려주었습니다.</div>
+       
+    <script>
+        
+        var canvas1=document.getElementById("canvas1");
+        var c1=canvas1.getContext("2d");
+        
+        c1.beginPath();
+        c1.strokeStyle="white";
+        c1.arc(70,70,60,0,2*Math.PI,true);
+        c1.stroke();
+        
+        
+        
+        canvas1.addEventListener("click",function(){
+        c1.beginPath();
+        c1.strokeStyle="greenyellow";
+        c1.arc(70,70,60,0,2*Math.PI,true);
+        c1.stroke();
+        
+        c1.font="12px arial";
+        c1.fillStyle="greenyellow";
+        c1.textAlign="center";
+        c1.fillText("GPGPU 개발로",70,60);
+        c1.fillText("인공지능 연구 활성화",70,80);
+        });
+        
+        var canvas2=document.getElementById("canvas2");
+        var c2=canvas2.getContext("2d");
+        
+        c2.beginPath();
+        c2.strokeStyle="white";
+        c2.arc(70,70,60,0,2*Math.PI,true);
+        c2.stroke();
+        
+        canvas2.addEventListener("click",function(){
+        c2.beginPath();
+        c2.strokeStyle="greenyellow";
+        c2.arc(70,70,60,0,2*Math.PI,true);
+        c2.stroke();
+        
+        c2.font="12px arial";
+        c2.fillStyle="greenyellow";
+        c2.textAlign="center";
+        c2.fillText("기계학습을 위한",70,60);
+        c2.fillText("데이터 용량 증가",70,80);
+        });
+        
+        var canvas3=document.getElementById("canvas3");
+        var c3=canvas3.getContext("2d");
+        
+        c3.beginPath();
+        c3.strokeStyle="white";
+        c3.arc(70,70,60,0,2*Math.PI,true);
+        c3.stroke();
+        
+        canvas3.addEventListener("click",function(){
+        c3.beginPath();
+        c3.strokeStyle="greenyellow";
+        c3.arc(70,70,60,0,2*Math.PI,true);
+        c3.stroke();
+        
+        c3.font="12px arial";
+        c3.fillStyle="greenyellow";
+        c3.textAlign="center";
+        c3.fillText("빅데이터 처리을 위한",70,60);
+        c3.fillText("클라우드 컴퓨팅",70,80);
+        c3.fillText("수요 증가",70,100);
+        });
+        
+        var canvas4=document.getElementById("canvas4");
+        var c4=canvas4.getContext("2d");
+        
+        c4.beginPath();
+        c4.strokeStyle="white";
+        c4.arc(70,70,60,0,2*Math.PI,true);
+        c4.stroke();
+        
+        canvas4.addEventListener("click",function(){
+        c4.beginPath();
+        c4.strokeStyle="greenyellow";
+        c4.arc(70,70,60,0,2*Math.PI,true);
+        c4.stroke();
+        
+        c4.font="12px arial";
+        c4.fillStyle="greenyellow";
+        c4.textAlign="center";
+        c4.fillText("클라우드 컴퓨팅을",70,60);
+        c4.fillText("수행하기 위한",70,80);
+        c4.fillText("데이터 서버 확충",70,100);
+            
+        
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+       $('body').ready(function(){
+           $('#div').hide();
+       });
+        $('#canvas4').click(function(){
+            $('#div').show();
+        })
+       
+    });
+    </script>
+</body>
+</html>

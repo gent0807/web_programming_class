@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window.open()</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;           
+        }
+    </style>
+</head>
+<body>
+<h2>References</h2>
+<hr>
+엔비디아의 사업 포트폴리오를 확인하기에 좋은 래퍼런스들을 링크로 제공한다.<br>
+<a href="javascript:load('http://www.nvidia.com')">엔비디아 홈페이지</a><br>   
+<a href="javascript:load('https://www.youtube.com/watch?v=MUQKG6psZJ0')">2021 GTC 컨퍼런스 키노트 요약</a><br>
+<a href="javascript:load('https://www.youtube.com/c/NVIDIAKorean')">nvidia korea channel</a><br>
+<a href="javascript:load('http://www.ttimes.co.kr/search.html?kwd=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84')">티타임즈 사이트 엔비디아 컨텐츠</a>
+<hr>
+<div>--설명란--<br>
+a 태그의 텍스트를 클릭하면 load()를 호출하도록 하고 load()의 실행문에 메소드의 인자로 주어진 URL을 새로운 윈도우로 여는 window.open()을 작성하여 새로운 윈도우에서 래퍼런스 사이트를 열도록 하였습니다.</div>
+<script>
+function load(URL){
+    window.open(URL, "myWin", "left=300,width=700,height=700");
+}    
+</script>
+</body>
+</html>

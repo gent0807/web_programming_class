@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 태그에 리스너 작성</title>
+    <script>
+var a;
+function init(){
+a= document.getElementById("p");        
+a.onmouseover=function (){
+  this.style.backgroundColor="orchid";
+  this.style.border="3px solid red";
+   alert("잘헸어요");
+}
+a.onmouseout=function(){
+    a.style.backgroundColor="white";
+}
+}    
+</script>
+</head>
+<body onload="init()">
+<h3>addEventListner()를 이용한 리스너 등록</h3>
+<hr>
+<p id=p>마우스 올리면 orchid 색으로 변경</p>
+</body>
+</html>

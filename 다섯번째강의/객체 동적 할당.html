@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 동적 생성하기</title>
+    <style>
+        div {
+            background-color: beige;
+            
+        }
+    
+    </style>
+</head>
+<body id="body1">
+    <h1>동적객체 생성하기</h1>
+    <div id = "div1">
+        <p>html</p>
+        <p>css</p>
+        <p>javascript</p>
+        <p>jQuery</p>        
+    </div>
+    <p>우리의 학습사랑</p>
+    <script>
+    var child1 = document.createTextNode("웹프로그래밍");
+    var twin = child1.cloneNode();
+        
+    var parent = document.getElementById("div1");
+    parent.appendChild(child1); 
+        
+    var parent2 = document.getElementById("body1");
+    parent2.appendChild(twin);    
+       
+        
+        
+    var child2 = document.createElement("hr");
+    var copy= child2.cloneNode();    
+    parent.appendChild(copy);
+    parent.insertBefore(child2, parent.children[1]);
+    //parent2.appendChild(child2)    
+    
+        
+        
+        
+    
+    </script>
+</body>
+</html>

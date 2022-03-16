@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @keyframes test { 
+            20%{
+                color: green;
+            }
+            50%{
+                color: blue;
+            }
+            100%{
+                color: :red;
+            }
+        }
+        h1 {
+            color: red;
+            animation: test 3s 4;
+        }
+        .animate bounce{
+            animation: 2s ls;
+        } 
+
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Homepage</h1>
+    <h2 class="animate__animated animate__bounce">animate.css 적용</h2>
+    <h1 id="id1">동양미래대학교</h1>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#id1").css("color","orange");
+    });
+</script>
+</body>
+</html>

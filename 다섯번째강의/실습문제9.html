@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>라면을 끓이는 순서</title>
+</head>
+<body>
+<h3>라면을 끓이는 순서</h3>
+<hr>
+   <script>
+    
+       
+       
+       
+       
+       function update(obj){
+  var str = prompt("라면을 끓이는 순서를 입력하라");
+  var child = document.createElement("li"); //태그명을 정해줘야 한다.
+  child.innerHTML=str;
+  obj.appendChild(child);
+}    
+
+
+
+
+   </script>
+<ol id= "ol" type= "A" style="background-color: yellowgreen" onclick="update(this)">
+    <li>물을 끓인다.</li>
+    
+    
+</ol>
+</body>
+</html>

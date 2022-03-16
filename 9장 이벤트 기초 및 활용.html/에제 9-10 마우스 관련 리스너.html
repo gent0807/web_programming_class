@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 관련 리스너</title>
+    <script>
+        var width=1;
+        
+        function down(obj){
+            obj.style.fontStyle = "italic";
+                    
+        }
+        function up(obj){
+            obj.style.fontStyle = "nomal";
+        }
+        function over(obj){
+            obj.style.borderColor= "red";
+        }
+        function wheel(a, obj){
+            if(a.wheelDelta<0){
+                width--;
+                if(width<0)
+                    width=0;
+            }
+            else {
+                width++;
+                obj.style.borderStyle = "ridge";
+                obj.borderWidth = width+"px";
+            }
+        }
+    </script>
+</head>
+<body>
+<div>마우스 관련<span onmousedown = "down(this)" onmouseup = "up(this)" onmouseover="over(this)" onmouseout="out(this)" onwheel="wheel(event,this)">이벤트</span>가 발생합니다.</div>
+    
+</body>
+</html>
